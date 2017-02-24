@@ -1,0 +1,14 @@
+HASH_FUNCTION
+
+The client reads a file, and sends it to the server, following the schema:
+Ek1(m, Hk2(m)),
+where:
+● m is the content of the file
+● k1 and k2 are shared keys
+● Ek1() is a symmetric encryption function (DES in CBC mode)
+● Hk2() is a keyed hash function (HMAC-MD5)
+● The server decrypts the message received from the client, verifies its authenticity, and saves it on a local file.
+● Different keys are used for authenticating and encrypting
+● The authentication key must be as long as an MD5 digest: 16 bytes.
+
+
