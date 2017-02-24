@@ -1,0 +1,6 @@
+DES_ENCRYPTION
+
+Client-server application for confidential file exchange.
+● Client and server share a symmetric cryptographic key (hard-coded in the program).
+● The client reads a file, encrypts it, and sends it through a stream socket.
+● The server receives the encrypted data, decrypts it, and saves it on a local file.
