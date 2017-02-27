@@ -1,0 +1,11 @@
+ASYMMETRIC_ENCRYPTION
+
+● On the server, generate a pair of 1024-bit RSA keys, by using OpenSSL
+command-line tools.
+● Give the public key to the client.
+● The client reads a file, envelopes it with the server's public key (DES in CBC),and sends to the server:
+
+● the encrypted symmetric key,
+● the initialization vector,
+● the ciphertext.
+● The server decrypts the message and saves it on a local file.
